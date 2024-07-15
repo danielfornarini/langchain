@@ -264,6 +264,8 @@ class UnstructuredAPIFileLoader(UnstructuredFileLoader):
     ):
         """Initialize with file path."""
 
+        raise Exception("test")
+
         validate_unstructured_version(min_unstructured_version="0.10.15")
 
         self.url = url
