@@ -99,6 +99,8 @@ class UnstructuredBaseLoader(BaseLoader, ABC):
                     metadata["category"] = element.category
                 yield Document(page_content=str(element), metadata=metadata)
         elif self.mode == "paged":
+            raise Exception('here')
+            
             text_dict: Dict[int, str] = {}
             meta_dict: Dict[int, Dict] = {}
 
@@ -263,8 +265,6 @@ class UnstructuredAPIFileLoader(UnstructuredFileLoader):
         **unstructured_kwargs: Any,
     ):
         """Initialize with file path."""
-
-        raise Exception("test")
 
         validate_unstructured_version(min_unstructured_version="0.10.15")
 
