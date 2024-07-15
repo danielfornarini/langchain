@@ -99,7 +99,7 @@ class UnstructuredBaseLoader(BaseLoader, ABC):
                     metadata["category"] = element.category
                 yield Document(page_content=str(element), metadata=metadata)
         elif self.mode == "paged":
-            raise Exception('here')
+            raise Exception(elements)
             
             text_dict: Dict[int, str] = {}
             meta_dict: Dict[int, Dict] = {}
